@@ -6,8 +6,15 @@ def encode(password):
         newpass += str(passwordlist[i])
     return newpass
 
-def decode(password):
-    pass
+def decode(password_to_decode):
+    original_password_to_decode = password_to_decode
+    password_to_encode = list(str(password_to_decode))
+    decoded_password = ""
+
+    for i in range(len(password_to_encode)):
+        decoded_password += (str(int(password_to_decode[i]) + 3))
+
+    return decoded_password
 
 def main():
     StoredP = ""
