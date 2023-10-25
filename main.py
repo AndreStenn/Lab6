@@ -12,7 +12,7 @@ def decode(password_to_decode):
     decoded_password = ""
 
     for i in range(len(password_to_encode)):
-        decoded_password += (str(int(password_to_decode[i]) + 3))
+        decoded_password += (str(int(password_to_decode[i]) - 3))
 
     return decoded_password
 
